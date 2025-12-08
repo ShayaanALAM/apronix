@@ -43,7 +43,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Email</div>
-                      <div className="font-medium">hello@apronix.com</div>
+                      <a href="mailto:Shayaan.alam111@gmail.com" className="font-medium hover:text-primary transition-colors">
+                        Shayaan.alam111@gmail.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -52,7 +54,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Phone</div>
-                      <div className="font-medium">+1 (555) 123-4567</div>
+                      <a href="tel:+919958143483" className="font-medium hover:text-primary transition-colors">
+                        +91 9958143483
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -61,7 +65,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Location</div>
-                      <div className="font-medium">New York, USA</div>
+                      <div className="font-medium">New Delhi, Delhi NCR, India</div>
                     </div>
                   </div>
                 </div>

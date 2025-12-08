@@ -1,21 +1,48 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    category: "Web Development",
+    title: "Sharma Electronics",
+    category: "E-Commerce Store",
+    description: "Complete online electronics store with payment gateway integration",
     color: "from-primary/40 to-accent/40",
+    client: "Mumbai, Maharashtra",
   },
   {
-    title: "SaaS Dashboard",
-    category: "UI/UX Design",
+    title: "PureVeda Wellness",
+    category: "Health & Wellness",
+    description: "Ayurvedic products marketplace with booking system",
     color: "from-accent/40 to-primary/40",
+    client: "Jaipur, Rajasthan",
   },
   {
-    title: "Corporate Website",
-    category: "Branding & Web",
+    title: "TechFlow Solutions",
+    category: "SaaS Dashboard",
+    description: "Enterprise CRM dashboard for IT company",
     color: "from-primary/40 to-accent/40",
+    client: "Bangalore, Karnataka",
+  },
+  {
+    title: "Spice Route Restaurant",
+    category: "Restaurant Website",
+    description: "Multi-cuisine restaurant with online ordering & table booking",
+    color: "from-accent/40 to-primary/40",
+    client: "Delhi NCR",
+  },
+  {
+    title: "HomeNest Interiors",
+    category: "Portfolio & Booking",
+    description: "Interior design showcase with consultation booking",
+    color: "from-primary/40 to-accent/40",
+    client: "Pune, Maharashtra",
+  },
+  {
+    title: "EduSpark Academy",
+    category: "EdTech Platform",
+    description: "Online learning platform with live classes & assessments",
+    color: "from-accent/40 to-primary/40",
+    client: "Hyderabad, Telangana",
   },
 ];
 
@@ -34,10 +61,10 @@ const Work = () => {
             Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            Featured <span className="gradient-text">Work</span>
+            Websites We've <span className="gradient-text">Built</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A glimpse of the projects we've brought to life for our clients.
+            Real projects delivered to our satisfied clients across India.
           </p>
         </motion.div>
 
@@ -52,23 +79,32 @@ const Work = () => {
               className="group relative cursor-pointer"
             >
               <div
-                className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}
+                className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden relative`}
               >
                 <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-300" />
-                <span className="text-3xl font-bold opacity-30 group-hover:opacity-50 transition-opacity">
-                  {project.title.charAt(0)}
-                </span>
+                <div className="relative z-10 text-center p-6">
+                  <span className="text-4xl font-bold opacity-40 group-hover:opacity-60 transition-opacity">
+                    {project.title.charAt(0)}
+                  </span>
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ExternalLink className="w-6 h-6 mx-auto text-primary" />
+                  </div>
+                </div>
               </div>
-              <div className="mt-4 flex items-start justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{project.category}</p>
+              <div className="mt-4">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-primary/80 font-medium">{project.category}</p>
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shrink-0">
+                    <ArrowUpRight className="w-5 h-5" />
+                  </div>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                  <ArrowUpRight className="w-5 h-5" />
-                </div>
+                <p className="text-sm text-muted-foreground mt-2">{project.description}</p>
+                <p className="text-xs text-muted-foreground/70 mt-1">📍 {project.client}</p>
               </div>
             </motion.div>
           ))}
