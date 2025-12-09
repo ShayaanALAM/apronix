@@ -1,48 +1,49 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     title: "Sharma Electronics",
     category: "E-Commerce Store",
     description: "Complete online electronics store with payment gateway integration",
-    color: "from-primary/40 to-accent/40",
     client: "Mumbai, Maharashtra",
+    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&h=600&fit=crop",
   },
   {
     title: "PureVeda Wellness",
     category: "Health & Wellness",
     description: "Ayurvedic products marketplace with booking system",
-    color: "from-accent/40 to-primary/40",
     client: "Jaipur, Rajasthan",
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=600&fit=crop",
   },
   {
     title: "TechFlow Solutions",
     category: "SaaS Dashboard",
     description: "Enterprise CRM dashboard for IT company",
-    color: "from-primary/40 to-accent/40",
     client: "Bangalore, Karnataka",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
   },
   {
     title: "Spice Route Restaurant",
     category: "Restaurant Website",
     description: "Multi-cuisine restaurant with online ordering & table booking",
-    color: "from-accent/40 to-primary/40",
     client: "Delhi NCR",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
   },
   {
     title: "HomeNest Interiors",
     category: "Portfolio & Booking",
     description: "Interior design showcase with consultation booking",
-    color: "from-primary/40 to-accent/40",
     client: "Pune, Maharashtra",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
   },
   {
     title: "EduSpark Academy",
     category: "EdTech Platform",
     description: "Online learning platform with live classes & assessments",
-    color: "from-accent/40 to-primary/40",
     client: "Hyderabad, Telangana",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
   },
 ];
 
@@ -76,19 +77,17 @@ const Work = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative cursor-pointer"
+              className="group relative"
             >
-              <div
-                className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden relative`}
-              >
-                <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-300" />
-                <div className="relative z-10 text-center p-6">
-                  <span className="text-4xl font-bold opacity-40 group-hover:opacity-60 transition-opacity">
-                    {project.title.charAt(0)}
-                  </span>
-                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <ExternalLink className="w-6 h-6 mx-auto text-primary" />
-                  </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ExternalLink className="w-6 h-6 mx-auto text-primary" />
                 </div>
               </div>
               <div className="mt-4">
@@ -109,6 +108,22 @@ const Work = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/work"
+            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+          >
+            View All Projects
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
