@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
-import { Code, Palette, Rocket, Search, Smartphone, Zap } from "lucide-react";
+import { Code, Megaphone, Palette, Rocket, Search, Smartphone } from "lucide-react";
 
 const services = [
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    description:
-      "Beautiful, intuitive designs that captivate users and enhance engagement.",
-  },
   {
     icon: Code,
     title: "Web Development",
@@ -16,15 +10,9 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: "Responsive Design",
+    title: "App Development",
     description:
-      "Pixel-perfect experiences across all devices, from mobile to desktop.",
-  },
-  {
-    icon: Rocket,
-    title: "Performance",
-    description:
-      "Lightning-fast loading speeds that keep visitors engaged and convert.",
+      "Native and cross-platform mobile apps that deliver exceptional user experiences.",
   },
   {
     icon: Search,
@@ -33,10 +21,22 @@ const services = [
       "Built-in SEO best practices to boost your visibility and rankings.",
   },
   {
-    icon: Zap,
-    title: "Maintenance",
+    icon: Megaphone,
+    title: "Digital Ads",
     description:
-      "Ongoing support and updates to keep your website running smoothly.",
+      "Strategic ad campaigns on Google, Facebook, and Instagram to grow your reach.",
+  },
+  {
+    icon: Palette,
+    title: "UI/UX Design",
+    description:
+      "Beautiful, intuitive designs that captivate users and enhance engagement.",
+  },
+  {
+    icon: Rocket,
+    title: "Performance",
+    description:
+      "Lightning-fast loading speeds that keep visitors engaged and convert.",
   },
 ];
 
