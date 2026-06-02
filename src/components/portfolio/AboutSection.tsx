@@ -42,11 +42,11 @@ export default function AboutSection() {
           className="hero-heading font-black uppercase leading-none tracking-tight text-center"
           style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
         >
-          About me
+          About us
         </h2>
       </FadeIn>
 
-      <AnimatedText text="With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!" />
+      <AnimatedText text="Shayaan is a web development agency with over five years of experience building modern websites and digital products. We focus on web design, development, branding, and user experience, partnering with businesses that want to stand out and present their best image. Let's build something incredible together!" />
 
       <div className="mt-6 sm:mt-10 md:mt-12">
         <ContactButton />
