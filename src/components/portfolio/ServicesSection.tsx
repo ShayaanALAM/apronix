@@ -1,11 +1,11 @@
 import FadeIn from "./FadeIn";
 
 const services = [
-  { n: "01", name: "3D Modeling", desc: "Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations." },
-  { n: "02", name: "Rendering", desc: "High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life." },
-  { n: "03", name: "Motion Design", desc: "Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences." },
-  { n: "04", name: "Branding", desc: "Crafting cohesive visual identities — from logos to full brand systems — that communicate a clear and memorable presence." },
-  { n: "05", name: "Web Design", desc: "Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience." },
+  { n: "01", name: "Web Development", desc: "Custom-built, high-performance websites and web apps using modern stacks like React, Next.js, and Node — scalable, secure, and fast." },
+  { n: "02", name: "App Development", desc: "Cross-platform mobile and web apps with intuitive UX, smooth animations, and reliable backend integrations." },
+  { n: "03", name: "UI/UX & Branding", desc: "Cohesive visual identities and interface design — from logos and brand systems to pixel-perfect product UI." },
+  { n: "04", name: "SEO Optimization", desc: "Technical and on-page SEO that gets your business found — keyword strategy, site architecture, and Core Web Vitals." },
+  { n: "05", name: "Digital Ads", desc: "Performance-driven Google and Meta ad campaigns with creative, targeting, and analytics that actually convert." },
 ];
 
 export default function ServicesSection() {
