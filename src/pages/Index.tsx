@@ -1,24 +1,18 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Work from "@/components/Work";
-import Testimonials from "@/components/Testimonials";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import HeroSection from "@/components/portfolio/HeroSection";
+import MarqueeSection from "@/components/portfolio/MarqueeSection";
+import AboutSection from "@/components/portfolio/AboutSection";
+import ServicesSection from "@/components/portfolio/ServicesSection";
+import ProjectsSection from "@/components/portfolio/ProjectsSection";
 import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Work />
-      <Testimonials />
-      <About />
-      <Contact />
-      <Footer />
+    <main className="min-h-screen" style={{ background: "#0C0C0C", overflowX: "clip" }}>
+      <HeroSection />
+      <MarqueeSection />
+      <AboutSection />
+      <ServicesSection />
+      <ProjectsSection />
       <Chatbot />
     </main>
   );
